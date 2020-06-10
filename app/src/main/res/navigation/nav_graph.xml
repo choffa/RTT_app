@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/testFragment">
+
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.choffa.rtt.NetworkList"
+        android:label="TestFragment" >
+        <action
+            android:id="@+id/action_testFragment_to_rttMeasurement"
+            app:destination="@id/rttMeasurement" />
+    </fragment>
+    <fragment
+        android:id="@+id/rttMeasurement"
+        android:name="com.choffa.rtt.RttMeasurement"
+        android:label="RttMeasurement" >
+        <argument
+            android:name="accessPoint"
+            app:argType="android.net.wifi.ScanResult" />
+    </fragment>
+</navigation>
